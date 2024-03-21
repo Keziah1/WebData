@@ -1,0 +1,427 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/kezia/ontologies/2024/2/Project"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/kezia/ontologies/2024/2/Project">
+    <Prefix name="" IRI="http://www.semanticweb.org/kezia/ontologies/2024/2/Project/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>file:/C:/Users/kezia/OneDrive/Documents/A4/Semestre%208/Web%20Data%20Mining%20&amp;%20Semantics/project/pref-charpenay.ttl</Import>
+    <Import>https://schema.org/</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://schema.org/#Burger"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#Client"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#CorporateClient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#DeliveryService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#ExpressDelivery"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#FastFoodRestaurant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#FoodDeliveryService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#FoodProduct"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#FoodTypePreferences"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#GuestClient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#HealthyRestaurant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#ItalianRestaurant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#LocationPreferences"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#Offer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#Pizza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#PremiumClient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#PricePreferences"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#RegularClient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#Restaurant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#Salad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#SpecialOffer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#StandardDelivery"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#StandardOffer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#TimePreferences"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/#UserPreferences"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#deliversTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCollaborationWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFood"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDeliveredBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPartOfMenu"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAge"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFoodType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasItalianFood"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasJapFood"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLocation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMexicanFood"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSchedule"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Margherita"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MariosRestaurant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SushiM10Saumonduturfu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#deliveryMan1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#restaurant2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#restaurant3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#restaurant4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ubereats"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#Burger"/>
+        <Class IRI="http://schema.org/#FoodProduct"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#Client"/>
+        <Class IRI="http://schema.org/#FoodDeliveryService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#CorporateClient"/>
+        <Class IRI="http://schema.org/#Client"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#DeliveryService"/>
+        <Class IRI="http://schema.org/#FoodDeliveryService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#ExpressDelivery"/>
+        <Class IRI="http://schema.org/#DeliveryService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#FastFoodRestaurant"/>
+        <Class IRI="http://schema.org/#Restaurant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#FoodProduct"/>
+        <Class IRI="http://schema.org/#FoodDeliveryService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#FoodTypePreferences"/>
+        <Class IRI="http://schema.org/#UserPreferences"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#GuestClient"/>
+        <Class IRI="http://schema.org/#Client"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#HealthyRestaurant"/>
+        <Class IRI="http://schema.org/#Restaurant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#ItalianRestaurant"/>
+        <Class IRI="http://schema.org/#Restaurant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#LocationPreferences"/>
+        <Class IRI="http://schema.org/#UserPreferences"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#Offer"/>
+        <Class IRI="http://schema.org/#FoodDeliveryService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#Pizza"/>
+        <Class IRI="http://schema.org/#FoodProduct"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#PremiumClient"/>
+        <Class IRI="http://schema.org/#Client"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#PricePreferences"/>
+        <Class IRI="http://schema.org/#UserPreferences"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#RegularClient"/>
+        <Class IRI="http://schema.org/#Client"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#Restaurant"/>
+        <Class IRI="http://schema.org/#FoodDeliveryService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#Salad"/>
+        <Class IRI="http://schema.org/#FoodProduct"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#SpecialOffer"/>
+        <Class IRI="http://schema.org/#Offer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#StandardDelivery"/>
+        <Class IRI="http://schema.org/#DeliveryService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#StandardOffer"/>
+        <Class IRI="http://schema.org/#Offer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#TimePreferences"/>
+        <Class IRI="http://schema.org/#UserPreferences"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/#UserPreferences"/>
+        <Class IRI="http://schema.org/#FoodDeliveryService"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="http://schema.org/#Burger"/>
+        <Class IRI="http://schema.org/#FoodDeliveryService"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://schema.org/#Client"/>
+        <Class IRI="http://schema.org/#Restaurant"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://schema.org/#FoodDeliveryService"/>
+        <Class IRI="http://schema.org/#Pizza"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="http://schema.org/#ItalianRestaurant"/>
+        <NamedIndividual IRI="#MariosRestaurant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://schema.org/#Restaurant"/>
+        <NamedIndividual IRI="#restaurant3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://schema.org/#DeliveryService"/>
+        <NamedIndividual IRI="#ubereats"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPartOfMenu"/>
+        <NamedIndividual IRI="#MariosRestaurant"/>
+        <NamedIndividual IRI="#MariosRestaurant"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDeliveredBy"/>
+        <NamedIndividual IRI="#restaurant3"/>
+        <NamedIndividual IRI="#ubereats"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCollaborationWith"/>
+        <NamedIndividual IRI="#ubereats"/>
+        <NamedIndividual IRI="#MariosRestaurant"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#MariosRestaurant"/>
+        <Literal>MariosRestaurant</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#restaurant2"/>
+        <Literal>LuigisRistorante</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#restaurant3"/>
+        <Literal>Mickys</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSchedule"/>
+        <NamedIndividual IRI="#restaurant3"/>
+        <Literal>9 To 5</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#deliversTo"/>
+        <ObjectProperty IRI="#isDeliveredBy"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#hasCollaborationWith"/>
+    </SymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#isPartOfMenu"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#deliversTo"/>
+        <Class IRI="http://schema.org/#DeliveryService"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCollaborationWith"/>
+        <Class IRI="http://schema.org/#Restaurant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFood"/>
+        <Class IRI="http://schema.org/#Restaurant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDeliveredBy"/>
+        <Class IRI="http://schema.org/#Restaurant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isPartOfMenu"/>
+        <Class IRI="http://schema.org/#FoodProduct"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#deliversTo"/>
+        <Class IRI="http://schema.org/#Restaurant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCollaborationWith"/>
+        <Class IRI="http://schema.org/#DeliveryService"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFood"/>
+        <Class IRI="http://schema.org/#FoodProduct"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isDeliveredBy"/>
+        <Class IRI="http://schema.org/#DeliveryService"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isPartOfMenu"/>
+        <Class IRI="http://schema.org/#Restaurant"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasItalianFood"/>
+        <DataProperty IRI="#hasFoodType"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasJapFood"/>
+        <DataProperty IRI="#hasFoodType"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasMexicanFood"/>
+        <DataProperty IRI="#hasFoodType"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAge"/>
+        <Class IRI="http://schema.org/#Client"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasFoodType"/>
+        <Class IRI="http://schema.org/#FoodProduct"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLocation"/>
+        <Class IRI="http://schema.org/#Restaurant"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMexicanFood"/>
+        <Class IRI="http://schema.org/#Restaurant"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasName"/>
+        <Class IRI="http://schema.org/#Restaurant"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSchedule"/>
+        <Class IRI="http://schema.org/#Restaurant"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAge"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasFoodType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLocation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSchedule"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

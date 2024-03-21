@@ -1,0 +1,919 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/kezia/ontologies/2024/2/Project/"
+     xml:base="http://www.semanticweb.org/kezia/ontologies/2024/2/Project/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/"
+     xmlns:Project="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#"
+     xmlns:schema1="https://schema.org/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project">
+        <owl:imports rdf:resource="file:/C:/Users/kezia/OneDrive/Documents/A4/Semestre%208/Web%20Data%20Mining%20&amp;%20Semantics/project/pref-charpenay.ttl"/>
+        <owl:imports rdf:resource="https://schema.org/"/>
+        <rdfs:comment xml:lang="en">this is an ontology about pizza</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#arrivalTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#arrivalTime">
+        <rdfs:domain rdf:resource="http://schema.org/#DeliveryMan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#deliversTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#deliversTo">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#isDeliveredBy"/>
+        <rdfs:domain rdf:resource="http://schema.org/#DeliveryService"/>
+        <rdfs:range rdf:resource="http://schema.org/#Client"/>
+        <rdfs:range rdf:resource="http://schema.org/#Restaurant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasCollaborationWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasCollaborationWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://schema.org/#Restaurant"/>
+        <rdfs:range rdf:resource="http://schema.org/#DeliveryService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasFood -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasFood">
+        <rdfs:domain rdf:resource="http://schema.org/#Restaurant"/>
+        <rdfs:range rdf:resource="http://schema.org/#FoodProduct"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#isDeliveredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#isDeliveredBy">
+        <rdfs:domain rdf:resource="http://schema.org/#Restaurant"/>
+        <rdfs:range rdf:resource="http://schema.org/#DeliveryService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#isPartOfMenu -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#isPartOfMenu">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://schema.org/#FoodProduct"/>
+        <rdfs:range rdf:resource="http://schema.org/#Restaurant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#isPickedUp -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#isPickedUp"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/acquiredFrom -->
+
+    <rdf:Description rdf:about="https://schema.org/acquiredFrom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://schema.org/#Restaurant"/>
+        <rdfs:range rdf:resource="http://schema.org/#Client"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/activityFrequency -->
+
+    <rdf:Description rdf:about="https://schema.org/activityFrequency">
+        <rdfs:domain rdf:resource="http://schema.org/#Restaurant"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/addressLocality -->
+
+    <rdf:Description rdf:about="https://schema.org/addressLocality">
+        <rdfs:domain rdf:resource="http://schema.org/#Restaurant"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/associatedReview -->
+
+    <rdf:Description rdf:about="https://schema.org/associatedReview">
+        <rdfs:domain rdf:resource="http://schema.org/#Restaurant"/>
+        <rdfs:range rdf:resource="http://schema.org/#Client"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/birthDate -->
+
+    <rdf:Description rdf:about="https://schema.org/birthDate">
+        <rdfs:domain rdf:resource="http://schema.org/#Client"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/calories -->
+
+    <rdf:Description rdf:about="https://schema.org/calories">
+        <rdfs:domain rdf:resource="http://schema.org/#FoodProduct"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/competitor -->
+
+    <rdf:Description rdf:about="https://schema.org/competitor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://schema.org/#Restaurant"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/countriesNotSupported -->
+
+    <rdf:Description rdf:about="https://schema.org/countriesNotSupported">
+        <rdfs:domain rdf:resource="http://schema.org/#DeliveryService"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/countriesSupported -->
+
+    <rdf:Description rdf:about="https://schema.org/countriesSupported">
+        <rdfs:domain rdf:resource="http://schema.org/#DeliveryService"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/customer -->
+
+    <rdf:Description rdf:about="https://schema.org/customer">
+        <rdfs:domain rdf:resource="http://schema.org/#Restaurant"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/dateReceived -->
+
+    <rdf:Description rdf:about="https://schema.org/dateReceived">
+        <rdfs:domain rdf:resource="http://schema.org/#Client"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/dateVehicleFirstRegistered -->
+
+    <rdf:Description rdf:about="https://schema.org/dateVehicleFirstRegistered">
+        <rdfs:domain rdf:resource="http://schema.org/#DeliveryMan"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/deliveryAddress -->
+
+    <rdf:Description rdf:about="https://schema.org/deliveryAddress">
+        <rdfs:domain rdf:resource="http://schema.org/#Client"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/gender -->
+
+    <rdf:Description rdf:about="https://schema.org/gender">
+        <rdfs:domain rdf:resource="http://schema.org/#Client"/>
+        <rdfs:domain rdf:resource="http://schema.org/#DeliveryMan"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/hasCredential -->
+
+    <rdf:Description rdf:about="https://schema.org/hasCredential">
+        <rdfs:domain rdf:resource="http://schema.org/#DeliveryMan"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/hasDeliveryMethod -->
+
+    <rdf:Description rdf:about="https://schema.org/hasDeliveryMethod">
+        <rdfs:domain rdf:resource="http://schema.org/#DeliveryService"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/isPartOf -->
+
+    <rdf:Description rdf:about="https://schema.org/isPartOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://schema.org/#FoodProduct"/>
+        <rdfs:range rdf:resource="http://schema.org/#Offer"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/name -->
+
+    <rdf:Description rdf:about="https://schema.org/name">
+        <rdfs:domain rdf:resource="http://schema.org/#Client"/>
+        <rdfs:domain rdf:resource="http://schema.org/#DeliveryMan"/>
+        <rdfs:domain rdf:resource="http://schema.org/#Restaurant"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/nationality -->
+
+    <rdf:Description rdf:about="https://schema.org/nationality">
+        <rdfs:domain rdf:resource="http://schema.org/#Client"/>
+        <rdfs:domain rdf:resource="http://schema.org/#DeliveryMan"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/salaryUponCompletion -->
+
+    <rdf:Description rdf:about="https://schema.org/salaryUponCompletion">
+        <rdfs:domain rdf:resource="http://schema.org/#DeliveryMan"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasAge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasAge">
+        <rdfs:domain rdf:resource="http://schema.org/#Client"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasFoodType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasFoodType">
+        <rdfs:domain rdf:resource="http://schema.org/#FoodProduct"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasItalianFood -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasItalianFood">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasFoodType"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasJapFood -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasJapFood">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasFoodType"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasLocation">
+        <rdfs:domain rdf:resource="http://schema.org/#Restaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasMexicanFood -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasMexicanFood">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasFoodType"/>
+        <rdfs:domain rdf:resource="http://schema.org/#Restaurant"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasName">
+        <rdfs:domain rdf:resource="http://schema.org/#Restaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasSchedule -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasSchedule">
+        <rdfs:domain rdf:resource="http://schema.org/#Restaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/arrivalTime -->
+
+    <rdf:Description rdf:about="https://schema.org/arrivalTime">
+        <rdfs:domain rdf:resource="http://schema.org/#DeliveryMan"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/availabilityEnds -->
+
+    <rdf:Description rdf:about="https://schema.org/availabilityEnds">
+        <rdfs:domain rdf:resource="http://schema.org/#Offer"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/availabilityStarts -->
+
+    <rdf:Description rdf:about="https://schema.org/availabilityStarts">
+        <rdfs:domain rdf:resource="http://schema.org/#Offer"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/availableFrom -->
+
+    <rdf:Description rdf:about="https://schema.org/availableFrom">
+        <rdfs:domain rdf:resource="http://schema.org/#Offer"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/availableThrough -->
+
+    <rdf:Description rdf:about="https://schema.org/availableThrough">
+        <rdfs:domain rdf:resource="http://schema.org/#Offer"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/birthDate -->
+
+    <rdf:Description rdf:about="https://schema.org/birthDate">
+        <rdfs:domain rdf:resource="http://schema.org/#Client"/>
+        <rdfs:domain rdf:resource="http://schema.org/#DeliveryMan"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/closes -->
+
+    <rdf:Description rdf:about="https://schema.org/closes">
+        <rdfs:domain rdf:resource="http://schema.org/#Restaurant"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/contactlessPayment -->
+
+    <rdf:Description rdf:about="https://schema.org/contactlessPayment">
+        <rdfs:domain rdf:resource="http://schema.org/#Restaurant"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/dateReceived -->
+
+    <rdf:Description rdf:about="https://schema.org/dateReceived">
+        <rdfs:domain rdf:resource="http://schema.org/#Client"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/dateSent -->
+
+    <rdf:Description rdf:about="https://schema.org/dateSent">
+        <rdfs:domain rdf:resource="http://schema.org/#DeliveryMan"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/dateVehicleFirstRegistered -->
+
+    <rdf:Description rdf:about="https://schema.org/dateVehicleFirstRegistered">
+        <rdfs:domain rdf:resource="http://schema.org/#DeliveryMan"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/deathDate -->
+
+    <rdf:Description rdf:about="https://schema.org/deathDate">
+        <rdfs:domain rdf:resource="http://schema.org/#Client"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/departureTime -->
+
+    <rdf:Description rdf:about="https://schema.org/departureTime">
+        <rdfs:domain rdf:resource="http://schema.org/#DeliveryMan"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/emissionsCO2 -->
+
+    <rdf:Description rdf:about="https://schema.org/emissionsCO2">
+        <rdfs:domain rdf:resource="http://schema.org/#DeliveryService"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/foundingDate -->
+
+    <rdf:Description rdf:about="https://schema.org/foundingDate">
+        <rdfs:domain rdf:resource="http://schema.org/#Restaurant"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/maximumAttendeeCapacity -->
+
+    <rdf:Description rdf:about="https://schema.org/maximumAttendeeCapacity">
+        <rdfs:domain rdf:resource="http://schema.org/#Restaurant"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/orderDate -->
+
+    <rdf:Description rdf:about="https://schema.org/orderDate">
+        <rdfs:domain rdf:resource="http://schema.org/#Client"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/#Burger -->
+
+    <owl:Class rdf:about="http://schema.org/#Burger">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#FoodProduct"/>
+        <owl:disjointWith rdf:resource="http://schema.org/#FoodDeliveryService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#Client -->
+
+    <owl:Class rdf:about="http://schema.org/#Client">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#FoodDeliveryService"/>
+        <owl:disjointWith rdf:resource="http://schema.org/#FoodProduct"/>
+        <owl:disjointWith rdf:resource="http://schema.org/#Restaurant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#CorporateClient -->
+
+    <owl:Class rdf:about="http://schema.org/#CorporateClient">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#Client"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#DeliveryMan -->
+
+    <owl:Class rdf:about="http://schema.org/#DeliveryMan">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#ExpressDelivery"/>
+        <rdfs:subClassOf rdf:resource="http://schema.org/#StandardDelivery"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#DeliveryService -->
+
+    <owl:Class rdf:about="http://schema.org/#DeliveryService">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#FoodDeliveryService"/>
+        <owl:disjointWith rdf:resource="http://schema.org/#Restaurant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#ExpressDelivery -->
+
+    <owl:Class rdf:about="http://schema.org/#ExpressDelivery">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#DeliveryService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#FastFoodRestaurant -->
+
+    <owl:Class rdf:about="http://schema.org/#FastFoodRestaurant">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#Restaurant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#FoodDeliveryService -->
+
+    <owl:Class rdf:about="http://schema.org/#FoodDeliveryService">
+        <owl:disjointWith rdf:resource="http://schema.org/#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#FoodProduct -->
+
+    <owl:Class rdf:about="http://schema.org/#FoodProduct">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#FoodDeliveryService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#FoodTypePreferences -->
+
+    <owl:Class rdf:about="http://schema.org/#FoodTypePreferences">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#UserPreferences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#GuestClient -->
+
+    <owl:Class rdf:about="http://schema.org/#GuestClient">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#Client"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#HealthyRestaurant -->
+
+    <owl:Class rdf:about="http://schema.org/#HealthyRestaurant">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#Restaurant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#ItalianRestaurant -->
+
+    <owl:Class rdf:about="http://schema.org/#ItalianRestaurant">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#Restaurant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#LocationPreferences -->
+
+    <owl:Class rdf:about="http://schema.org/#LocationPreferences">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#UserPreferences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#Offer -->
+
+    <owl:Class rdf:about="http://schema.org/#Offer">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#FoodDeliveryService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#Pizza -->
+
+    <owl:Class rdf:about="http://schema.org/#Pizza">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#FoodProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#PremiumClient -->
+
+    <owl:Class rdf:about="http://schema.org/#PremiumClient">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#Client"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#PricePreferences -->
+
+    <owl:Class rdf:about="http://schema.org/#PricePreferences">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#UserPreferences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#RegularClient -->
+
+    <owl:Class rdf:about="http://schema.org/#RegularClient">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#Client"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#Restaurant -->
+
+    <owl:Class rdf:about="http://schema.org/#Restaurant">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#FoodDeliveryService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#Salad -->
+
+    <owl:Class rdf:about="http://schema.org/#Salad">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#FoodProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#SpecialOffer -->
+
+    <owl:Class rdf:about="http://schema.org/#SpecialOffer">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#Offer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#StandardDelivery -->
+
+    <owl:Class rdf:about="http://schema.org/#StandardDelivery">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#DeliveryService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#StandardOffer -->
+
+    <owl:Class rdf:about="http://schema.org/#StandardOffer">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#Offer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#TimePreferences -->
+
+    <owl:Class rdf:about="http://schema.org/#TimePreferences">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#UserPreferences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/#UserPreferences -->
+
+    <owl:Class rdf:about="http://schema.org/#UserPreferences">
+        <rdfs:subClassOf rdf:resource="http://schema.org/#FoodDeliveryService"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#Aurel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#Aurel">
+        <rdf:type rdf:resource="http://schema.org/#Client"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#Bowser -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#Bowser">
+        <rdf:type rdf:resource="http://schema.org/#DeliveryMan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#Deliveroo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#Deliveroo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#Luis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#Luis">
+        <rdf:type rdf:resource="http://schema.org/#Client"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#Margherita -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#Margherita"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#MariosRestaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#MariosRestaurant">
+        <rdf:type rdf:resource="http://schema.org/#ItalianRestaurant"/>
+        <rdf:type rdf:resource="http://schema.org/#Restaurant"/>
+        <Project:isPartOfMenu rdf:resource="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#MariosRestaurant"/>
+        <Project:hasName>MariosRestaurant</Project:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#Oce -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#Oce">
+        <rdf:type rdf:resource="http://schema.org/#Client"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#Pizzadelamamma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#Pizzadelamamma">
+        <rdf:type rdf:resource="http://schema.org/#Restaurant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#Raph -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#Raph">
+        <rdf:type rdf:resource="http://schema.org/#DeliveryMan"/>
+        <Project:isPickedUp rdf:resource="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#Raph"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#SushiM10Saumonduturfu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#SushiM10Saumonduturfu"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#deliveryMan1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#deliveryMan1"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#doordash -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#doordash">
+        <rdf:type rdf:resource="http://schema.org/#DeliveryService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#reducDuMidi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#reducDuMidi">
+        <rdf:type rdf:resource="http://schema.org/#Offer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#reducDuSoir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#reducDuSoir">
+        <rdf:type rdf:resource="http://schema.org/#Offer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#reducDuWeekend -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#reducDuWeekend">
+        <rdf:type rdf:resource="http://schema.org/#Offer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#restaurant2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#restaurant2">
+        <rdf:type rdf:resource="http://schema.org/#Restaurant"/>
+        <Project:hasName>LuigisRistorante</Project:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#restaurant3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#restaurant3">
+        <rdf:type rdf:resource="http://schema.org/#Restaurant"/>
+        <Project:isDeliveredBy rdf:resource="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#ubereats"/>
+        <Project:hasName>Mickys</Project:hasName>
+        <Project:hasSchedule>9 To 5</Project:hasSchedule>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#restaurant4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#restaurant4"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#tony -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#tony">
+        <rdf:type rdf:resource="http://schema.org/#DeliveryMan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kezia/ontologies/2024/2/Project#ubereats -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#ubereats">
+        <rdf:type rdf:resource="http://schema.org/#DeliveryService"/>
+        <Project:hasCollaborationWith rdf:resource="http://www.semanticweb.org/kezia/ontologies/2024/2/Project#MariosRestaurant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.org/colleague -->
+
+    <owl:NamedIndividual rdf:about="https://schema.org/colleague">
+        <rdf:type rdf:resource="http://schema.org/#DeliveryMan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.org/employee -->
+
+    <owl:NamedIndividual rdf:about="https://schema.org/employee">
+        <rdf:type rdf:resource="http://schema.org/#Client"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.org/members -->
+
+    <owl:NamedIndividual rdf:about="https://schema.org/members">
+        <rdf:type rdf:resource="http://schema.org/#Client"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.org/parent -->
+
+    <owl:NamedIndividual rdf:about="https://schema.org/parent">
+        <rdf:type rdf:resource="http://schema.org/#Client"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

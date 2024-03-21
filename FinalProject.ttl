@@ -1,0 +1,282 @@
+@prefix : <http://www.semanticweb.org/kezia/ontologies/2024/2/Project/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/kezia/ontologies/2024/2/Project/> .
+
+<http://www.semanticweb.org/kezia/ontologies/2024/2/Project> rdf:type owl:Ontology ;
+                                                              owl:imports <file:/C:/Users/kezia/OneDrive/Documents/A4/Semestre%208/Web%20Data%20Mining%20&%20Semantics/project/pref-charpenay.ttl> ,
+                                                                          <https://schema.org/> ;
+                                                              rdfs:comment "this is an ontology about pizza"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/kezia/ontologies/2024/2/Project#deliversTo
+:deliversTo rdf:type owl:ObjectProperty ;
+            owl:inverseOf :isDeliveredBy ;
+            rdfs:domain <http://schema.org/#DeliveryService> ;
+            rdfs:range <http://schema.org/#Restaurant> .
+
+
+###  http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasCollaborationWith
+:hasCollaborationWith rdf:type owl:ObjectProperty ,
+                               owl:SymmetricProperty ;
+                      rdfs:domain <http://schema.org/#Restaurant> ;
+                      rdfs:range <http://schema.org/#DeliveryService> .
+
+
+###  http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasFood
+:hasFood rdf:type owl:ObjectProperty ;
+         rdfs:domain <http://schema.org/#Restaurant> ;
+         rdfs:range <http://schema.org/#FoodProduct> .
+
+
+###  http://www.semanticweb.org/kezia/ontologies/2024/2/Project#isDeliveredBy
+:isDeliveredBy rdf:type owl:ObjectProperty ;
+               rdfs:domain <http://schema.org/#Restaurant> ;
+               rdfs:range <http://schema.org/#DeliveryService> .
+
+
+###  http://www.semanticweb.org/kezia/ontologies/2024/2/Project#isPartOfMenu
+:isPartOfMenu rdf:type owl:ObjectProperty ,
+                       owl:TransitiveProperty ;
+              rdfs:domain <http://schema.org/#FoodProduct> ;
+              rdfs:range <http://schema.org/#Restaurant> .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdf:type owl:TransitiveProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasAge
+:hasAge rdf:type owl:DatatypeProperty ;
+        rdfs:domain <http://schema.org/#Client> ;
+        rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasFoodType
+:hasFoodType rdf:type owl:DatatypeProperty ;
+             rdfs:domain <http://schema.org/#FoodProduct> ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasItalianFood
+:hasItalianFood rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasFoodType .
+
+
+###  http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasJapFood
+:hasJapFood rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasFoodType .
+
+
+###  http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasLocation
+:hasLocation rdf:type owl:DatatypeProperty ;
+             rdfs:domain <http://schema.org/#Restaurant> ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasMexicanFood
+:hasMexicanFood rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasFoodType ;
+                rdfs:domain <http://schema.org/#Restaurant> .
+
+
+###  http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasName
+:hasName rdf:type owl:DatatypeProperty ;
+         rdfs:domain <http://schema.org/#Restaurant> ;
+         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/kezia/ontologies/2024/2/Project#hasSchedule
+:hasSchedule rdf:type owl:DatatypeProperty ;
+             rdfs:domain <http://schema.org/#Restaurant> ;
+             rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://schema.org/#Burger
+<http://schema.org/#Burger> rdf:type owl:Class ;
+                            rdfs:subClassOf <http://schema.org/#FoodProduct> ;
+                            owl:disjointWith <http://schema.org/#FoodDeliveryService> .
+
+
+###  http://schema.org/#Client
+<http://schema.org/#Client> rdf:type owl:Class ;
+                            rdfs:subClassOf <http://schema.org/#FoodDeliveryService> ;
+                            owl:disjointWith <http://schema.org/#Restaurant> .
+
+
+###  http://schema.org/#CorporateClient
+<http://schema.org/#CorporateClient> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://schema.org/#Client> .
+
+
+###  http://schema.org/#DeliveryService
+<http://schema.org/#DeliveryService> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://schema.org/#FoodDeliveryService> .
+
+
+###  http://schema.org/#ExpressDelivery
+<http://schema.org/#ExpressDelivery> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://schema.org/#DeliveryService> .
+
+
+###  http://schema.org/#FastFoodRestaurant
+<http://schema.org/#FastFoodRestaurant> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://schema.org/#Restaurant> .
+
+
+###  http://schema.org/#FoodDeliveryService
+<http://schema.org/#FoodDeliveryService> rdf:type owl:Class ;
+                                         owl:disjointWith <http://schema.org/#Pizza> .
+
+
+###  http://schema.org/#FoodProduct
+<http://schema.org/#FoodProduct> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://schema.org/#FoodDeliveryService> .
+
+
+###  http://schema.org/#FoodTypePreferences
+<http://schema.org/#FoodTypePreferences> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://schema.org/#UserPreferences> .
+
+
+###  http://schema.org/#GuestClient
+<http://schema.org/#GuestClient> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://schema.org/#Client> .
+
+
+###  http://schema.org/#HealthyRestaurant
+<http://schema.org/#HealthyRestaurant> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://schema.org/#Restaurant> .
+
+
+###  http://schema.org/#ItalianRestaurant
+<http://schema.org/#ItalianRestaurant> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://schema.org/#Restaurant> .
+
+
+###  http://schema.org/#LocationPreferences
+<http://schema.org/#LocationPreferences> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://schema.org/#UserPreferences> .
+
+
+###  http://schema.org/#Offer
+<http://schema.org/#Offer> rdf:type owl:Class ;
+                           rdfs:subClassOf <http://schema.org/#FoodDeliveryService> .
+
+
+###  http://schema.org/#Pizza
+<http://schema.org/#Pizza> rdf:type owl:Class ;
+                           rdfs:subClassOf <http://schema.org/#FoodProduct> .
+
+
+###  http://schema.org/#PremiumClient
+<http://schema.org/#PremiumClient> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://schema.org/#Client> .
+
+
+###  http://schema.org/#PricePreferences
+<http://schema.org/#PricePreferences> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://schema.org/#UserPreferences> .
+
+
+###  http://schema.org/#RegularClient
+<http://schema.org/#RegularClient> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://schema.org/#Client> .
+
+
+###  http://schema.org/#Restaurant
+<http://schema.org/#Restaurant> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://schema.org/#FoodDeliveryService> .
+
+
+###  http://schema.org/#Salad
+<http://schema.org/#Salad> rdf:type owl:Class ;
+                           rdfs:subClassOf <http://schema.org/#FoodProduct> .
+
+
+###  http://schema.org/#SpecialOffer
+<http://schema.org/#SpecialOffer> rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://schema.org/#Offer> .
+
+
+###  http://schema.org/#StandardDelivery
+<http://schema.org/#StandardDelivery> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://schema.org/#DeliveryService> .
+
+
+###  http://schema.org/#StandardOffer
+<http://schema.org/#StandardOffer> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://schema.org/#Offer> .
+
+
+###  http://schema.org/#TimePreferences
+<http://schema.org/#TimePreferences> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://schema.org/#UserPreferences> .
+
+
+###  http://schema.org/#UserPreferences
+<http://schema.org/#UserPreferences> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://schema.org/#FoodDeliveryService> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/kezia/ontologies/2024/2/Project#Margherita
+:Margherita rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/kezia/ontologies/2024/2/Project#MariosRestaurant
+:MariosRestaurant rdf:type owl:NamedIndividual ,
+                           <http://schema.org/#ItalianRestaurant> ;
+                  :isPartOfMenu :MariosRestaurant ;
+                  :hasName "MariosRestaurant" .
+
+
+###  http://www.semanticweb.org/kezia/ontologies/2024/2/Project#SushiM10Saumonduturfu
+:SushiM10Saumonduturfu rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/kezia/ontologies/2024/2/Project#deliveryMan1
+:deliveryMan1 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/kezia/ontologies/2024/2/Project#restaurant2
+:restaurant2 rdf:type owl:NamedIndividual ;
+             :hasName "LuigisRistorante" .
+
+
+###  http://www.semanticweb.org/kezia/ontologies/2024/2/Project#restaurant3
+:restaurant3 rdf:type owl:NamedIndividual ,
+                      <http://schema.org/#Restaurant> ;
+             :isDeliveredBy :ubereats ;
+             :hasName "Mickys" ;
+             :hasSchedule "9 To 5" .
+
+
+###  http://www.semanticweb.org/kezia/ontologies/2024/2/Project#restaurant4
+:restaurant4 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/kezia/ontologies/2024/2/Project#ubereats
+:ubereats rdf:type owl:NamedIndividual ,
+                   <http://schema.org/#DeliveryService> ;
+          :hasCollaborationWith :MariosRestaurant .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
